@@ -1,0 +1,31 @@
+Assets:
+  - ID: 18024964463121501974
+    Type: Texture2D
+    Path: C:\dev\Omni Projects\TestProject4\assets\joosesprites0.png
+  - ID: 10541723082856428643
+    Type: Misc
+    Path: C:\dev\Omni Projects\TestProject4\assets\imgui.ini
+  - ID: 727745782934740198
+    Type: Texture2D
+    Path: C:\dev\Omni Projects\TestProject4\assets\Color_Grid.png
+  - ID: 18064623489080585732
+    Type: Scene
+    Path: C:\dev\Omni Projects\TestProject4\assets\scenes\Test4.omscene
+  - ID: 9046268343089011543
+    Type: Texture2D
+    Path: C:\dev\Omni Projects\TestProject4\assets\Smiles.png
+  - ID: 12091299273736898709
+    Type: Shader
+    Path: C:\dev\Omni Projects\TestProject4\assets\shaders\Omni_Sprite.glsl
+  - ID: 9802913542220805447
+    Type: Shader
+    Path: C:\dev\Omni Projects\TestProject4\assets\shaders\RayMarch.glsl
+  - ID: 1376587175555364089
+    Type: Shader
+    Path: C:\dev\Omni Projects\TestProject4\assets\shaders\Test_Sprite.glsl
+  - ID: 1617222156582141373
+    Type: Scene
+    Path: C:\dev\Omni Projects\TestProject4\assets\scenes\RayMarch.omscene
+  - ID: 12957736547412377276
+    Type: Text
+    Path: C:\dev\Omni Projects\TestProject4\assets\data.json

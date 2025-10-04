@@ -1,0 +1,12 @@
+Project Data:
+  Configurations:
+    - Debug
+    - Release
+  Binaries:
+    Debug: project\bin\Debug-windows-x86_64\TestProject4\TestProject4.dll
+    Release: project\bin\Release-windows-x86_64\TestProject4\TestProject4.dll
+  Dependencies:
+    Debug:
+      - project\vendor
+    Release:
+      - project\vendor

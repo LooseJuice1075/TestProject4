@@ -1,0 +1,3 @@
+LogInitMessage = FALSE
+LogWindowEvents = TRUE
+LogRendererInfo = TRUE

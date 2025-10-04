@@ -1,0 +1,7 @@
+Project:
+  Name: TestProject4
+  AssetMapPath: assetdata\assetdata.assetmap
+  AssetDirectory: assets
+  StartScene: C:\dev\Omni Projects\TestProject4\assets\scenes\RayMarch.omscene
+  ProjectDataPath: assetdata\projectdata.yaml
+  ProjectDirectory: project

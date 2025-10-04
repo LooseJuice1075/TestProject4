@@ -1,0 +1,426 @@
+Scene: New Scene
+Entities:
+  - Entity: 466695209862808424
+    Active: true
+    Name: Player
+    RelationshipComponent:
+      Parent: "NULL"
+      Children:
+        {}
+    TransformComponent:
+      Transform: [0, 2, 7]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+      LocalTransform: [0, 2, 7]
+      LocalRotation: [0, 0, 0]
+      LocalScale: [1, 1, 1]
+    CameraComponent:
+      Active: true
+      FOV: 0.800000012
+      NearClip: -1
+      FarClip: 1000
+      ResolutionX: 558
+      ResolutionY: 438
+      Type: Perspective
+      IsMainCamera: false
+      FixedAspectRatio: false
+    NativeScriptComponent:
+      Active: true
+      Script: 8788658725854519592
+      Parameters:
+        - ID: 8086477829496869495
+          Type: 4
+          Value: 10
+        - ID: 4880520127796880419
+          Type: 4
+          Value: 78
+  - Entity: 12928605282407393454
+    Active: true
+    Name: Sphere
+    RelationshipComponent:
+      Parent: "NULL"
+      Children:
+        {}
+    TransformComponent:
+      Transform: [0, 1.5, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+      LocalTransform: [0, 1.5, 0]
+      LocalRotation: [0, 0, 0]
+      LocalScale: [1, 1, 1]
+    Sphere:
+      Parameters:
+        - ID: 4491700942346212859
+          Type: 4
+          Value: 0.300000012
+        - ID: 7641380440705547032
+          Type: 4
+          Value: 1
+        - ID: 7829435485407950221
+          Type: 4
+          Value: 0.5
+        - ID: 16061874597572524646
+          Type: 4
+          Value: 0
+        - ID: 16541060979160176014
+          Type: 4
+          Value: 0.400000006
+  - Entity: 15011949473981752791
+    Active: true
+    Name: Box
+    RelationshipComponent:
+      Parent: "NULL"
+      Children:
+        {}
+    TransformComponent:
+      Transform: [2, 1, 0]
+      Rotation: [0, 0, 0]
+      Scale: [0.5, 0.5, 0.5]
+      LocalTransform: [2, 1, 0]
+      LocalRotation: [0, 0, 0]
+      LocalScale: [0.5, 0.5, 0.5]
+    Box:
+      Parameters:
+        - ID: 2434607990049637580
+          Type: 4
+          Value: 1
+        - ID: 10684059545308908394
+          Type: 4
+          Value: 1
+        - ID: 14824809454350982583
+          Type: 4
+          Value: 0.400000006
+        - ID: 15011505269966605744
+          Type: 4
+          Value: 1
+  - Entity: 4607075089321041031
+    Active: true
+    Name: Cylinder
+    RelationshipComponent:
+      Parent: "NULL"
+      Children:
+        {}
+    TransformComponent:
+      Transform: [-2.5, 1.5, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+      LocalTransform: [-2.5, 1.5, 0]
+      LocalRotation: [0, 0, 0]
+      LocalScale: [1, 1, 1]
+    Cylinder:
+      Parameters:
+        - ID: 1739077623912565484
+          Type: 4
+          Value: 1
+        - ID: 4303556564411499351
+          Type: 4
+          Value: 0
+        - ID: 6011459874313632548
+          Type: 4
+          Value: 0.800000012
+        - ID: 10310988231991596656
+          Type: 4
+          Value: 0
+        - ID: 15738440323697624304
+          Type: 4
+          Value: 0.449999988
+  - Entity: 9823113088105010005
+    Active: true
+    Name: Wall 1
+    RelationshipComponent:
+      Parent: "NULL"
+      Children:
+        {}
+    TransformComponent:
+      Transform: [0, 12, -6]
+      Rotation: [0, 0, 0]
+      Scale: [12, 12, 1]
+      LocalTransform: [0, 12, -6]
+      LocalRotation: [0, 0, 0]
+      LocalScale: [12, 12, 1]
+    TexturedBox:
+      Parameters:
+        - ID: 1911375522390315374
+          Type: 4
+          Value: 0.524999976
+        - ID: 4112456018670455898
+          Type: 4
+          Value: 0.416000009
+        - ID: 7431374160918991984
+          Type: 4
+          Value: 0
+        - ID: 10516733998445262552
+          Type: 4
+          Value: 1
+        - ID: 11267309283678801429
+          Type: 4
+          Value: 0.200000003
+        - ID: 12656556527923783982
+          Type: 4
+          Value: 1
+  - Entity: 4636006779055569046
+    Active: true
+    Name: Wall 2
+    RelationshipComponent:
+      Parent: "NULL"
+      Children:
+        {}
+    TransformComponent:
+      Transform: [0, 12, 12]
+      Rotation: [0, 0, 0]
+      Scale: [12, 12, 1]
+      LocalTransform: [0, 12, 12]
+      LocalRotation: [0, 0, 0]
+      LocalScale: [12, 12, 1]
+    TexturedBox:
+      Parameters:
+        - ID: 1911375522390315374
+          Type: 4
+          Value: 0.524999976
+        - ID: 4112456018670455898
+          Type: 4
+          Value: 0.416000009
+        - ID: 7431374160918991984
+          Type: 4
+          Value: 0
+        - ID: 10516733998445262552
+          Type: 4
+          Value: 1
+        - ID: 11267309283678801429
+          Type: 4
+          Value: 0.200000003
+        - ID: 12656556527923783982
+          Type: 4
+          Value: 1
+  - Entity: 15952312262961682624
+    Active: true
+    Name: Wall 3
+    RelationshipComponent:
+      Parent: "NULL"
+      Children:
+        {}
+    TransformComponent:
+      Transform: [-12.5, 12, 3]
+      Rotation: [0, 0, 0]
+      Scale: [1, 12, 10]
+      LocalTransform: [-12.5, 12, 3]
+      LocalRotation: [0, 0, 0]
+      LocalScale: [1, 12, 10]
+    TexturedBox:
+      Parameters:
+        - ID: 1911375522390315374
+          Type: 4
+          Value: 0.524999976
+        - ID: 4112456018670455898
+          Type: 4
+          Value: 0.416000009
+        - ID: 7431374160918991984
+          Type: 4
+          Value: 0
+        - ID: 10516733998445262552
+          Type: 4
+          Value: 1
+        - ID: 11267309283678801429
+          Type: 4
+          Value: 0.200000003
+        - ID: 12656556527923783982
+          Type: 4
+          Value: 1
+  - Entity: 7532257598456771288
+    Active: true
+    Name: Wall 4
+    RelationshipComponent:
+      Parent: "NULL"
+      Children:
+        {}
+    TransformComponent:
+      Transform: [11, 20, 3]
+      Rotation: [0, 0, 0]
+      Scale: [1, 12, 10]
+      LocalTransform: [11, 20, 3]
+      LocalRotation: [0, 0, 0]
+      LocalScale: [1, 12, 10]
+    TexturedBox:
+      Parameters:
+        - ID: 1911375522390315374
+          Type: 4
+          Value: 0.524999976
+        - ID: 4112456018670455898
+          Type: 4
+          Value: 0.416000009
+        - ID: 7431374160918991984
+          Type: 4
+          Value: 0
+        - ID: 10516733998445262552
+          Type: 4
+          Value: 1
+        - ID: 11267309283678801429
+          Type: 4
+          Value: 0.200000003
+        - ID: 12656556527923783982
+          Type: 4
+          Value: 1
+  - Entity: 15046693166443652121
+    Active: true
+    Name: Wall 5
+    RelationshipComponent:
+      Parent: "NULL"
+      Children:
+        {}
+    TransformComponent:
+      Transform: [11, 12, -17]
+      Rotation: [0, 0, 0]
+      Scale: [0.999994457, 12, 9.99991131]
+      LocalTransform: [11, 12, -17]
+      LocalRotation: [0, 0, 0]
+      LocalScale: [0.999994457, 12, 9.99991131]
+    TexturedBox:
+      Parameters:
+        - ID: 1911375522390315374
+          Type: 4
+          Value: 0.524999976
+        - ID: 4112456018670455898
+          Type: 4
+          Value: 0.416000009
+        - ID: 7431374160918991984
+          Type: 4
+          Value: 0
+        - ID: 10516733998445262552
+          Type: 4
+          Value: 1
+        - ID: 11267309283678801429
+          Type: 4
+          Value: 0.200000003
+        - ID: 12656556527923783982
+          Type: 4
+          Value: 1
+  - Entity: 17344787721388994710
+    Active: true
+    Name: Pillar 1
+    RelationshipComponent:
+      Parent: "NULL"
+      Children:
+        {}
+    TransformComponent:
+      Transform: [26, 1.5, 3]
+      Rotation: [0, 0, 0]
+      Scale: [2, 1.5, 2]
+      LocalTransform: [26, 1.5, 3]
+      LocalRotation: [0, 0, 0]
+      LocalScale: [2, 1.5, 2]
+    TexturedBox:
+      Parameters:
+        - ID: 1911375522390315374
+          Type: 4
+          Value: 0.524999976
+        - ID: 4112456018670455898
+          Type: 4
+          Value: 0.416000009
+        - ID: 7431374160918991984
+          Type: 4
+          Value: 0
+        - ID: 10516733998445262552
+          Type: 4
+          Value: 1
+        - ID: 11267309283678801429
+          Type: 4
+          Value: 0.200000003
+        - ID: 12656556527923783982
+          Type: 4
+          Value: 1
+  - Entity: 7546297323585489083
+    Active: true
+    Name: Pillar 2
+    RelationshipComponent:
+      Parent: "NULL"
+      Children:
+        {}
+    TransformComponent:
+      Transform: [26, 14, 3]
+      Rotation: [0, 0, 0]
+      Scale: [2, 6, 2]
+      LocalTransform: [26, 14, 3]
+      LocalRotation: [0, 0, 0]
+      LocalScale: [2, 6, 2]
+    TexturedBox:
+      Parameters:
+        - ID: 1911375522390315374
+          Type: 4
+          Value: 0.524999976
+        - ID: 4112456018670455898
+          Type: 4
+          Value: 0.416000009
+        - ID: 7431374160918991984
+          Type: 4
+          Value: 0
+        - ID: 10516733998445262552
+          Type: 4
+          Value: 1
+        - ID: 11267309283678801429
+          Type: 4
+          Value: 0.200000003
+        - ID: 12656556527923783982
+          Type: 4
+          Value: 1
+  - Entity: 2459704568815459685
+    Active: true
+    Name: Blue Sphere
+    RelationshipComponent:
+      Parent: "NULL"
+      Children:
+        {}
+    TransformComponent:
+      Transform: [26, 4, 3]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+      LocalTransform: [26, 4, 3]
+      LocalRotation: [0, 0, 0]
+      LocalScale: [1, 1, 1]
+    Sphere:
+      Parameters:
+        - ID: 4491700942346212859
+          Type: 4
+          Value: 1
+        - ID: 7641380440705547032
+          Type: 4
+          Value: 0.400000006
+        - ID: 7829435485407950221
+          Type: 4
+          Value: 0.5
+        - ID: 16061874597572524646
+          Type: 4
+          Value: 0
+        - ID: 16541060979160176014
+          Type: 4
+          Value: 0.400000006
+  - Entity: 6271997503480610011
+    Active: true
+    Name: Red Sphere
+    RelationshipComponent:
+      Parent: "NULL"
+      Children:
+        {}
+    TransformComponent:
+      Transform: [26, 7, 3]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+      LocalTransform: [26, 7, 3]
+      LocalRotation: [0, 0, 0]
+      LocalScale: [1, 1, 1]
+    Sphere:
+      Parameters:
+        - ID: 4491700942346212859
+          Type: 4
+          Value: 0.400000006
+        - ID: 7641380440705547032
+          Type: 4
+          Value: 0
+        - ID: 7829435485407950221
+          Type: 4
+          Value: 0.5
+        - ID: 16061874597572524646
+          Type: 4
+          Value: 1
+        - ID: 16541060979160176014
+          Type: 4
+          Value: 0.400000006

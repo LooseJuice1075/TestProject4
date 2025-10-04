@@ -1,0 +1,77 @@
+Scene: New Scene
+Entities:
+  - Entity: 13601814158894324124
+    Active: true
+    Name: BG
+    RelationshipComponent:
+      Parent: "NULL"
+      Children:
+        {}
+    TransformComponent:
+      Transform: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [16, 16, 1]
+      LocalTransform: [0, 0, 0]
+      LocalRotation: [0, 0, 0]
+      LocalScale: [16, 16, 1]
+    SpriteRendererComponent:
+      Active: true
+      Color: [1, 1, 1, 1]
+      Texture: 727745782934740198
+      TilingFactor: 1
+      Size: [1024, 1024]
+      SpritePosition: [0, 0]
+  - Entity: 10096340721549477793
+    Active: true
+    Name: Player
+    RelationshipComponent:
+      Parent: "NULL"
+      Children:
+        {}
+    TransformComponent:
+      Transform: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+      LocalTransform: [0, 0, 0]
+      LocalRotation: [0, 0, 0]
+      LocalScale: [1, 1, 1]
+    SpriteRendererComponent:
+      Active: true
+      Color: [1, 1, 1, 1]
+      Texture: 9046268343089011543
+      TilingFactor: 1
+      Size: [16, 16]
+      SpritePosition: [0, 0]
+    NativeScriptComponent:
+      Active: true
+      Script: 15517795597030674628
+      Parameters:
+        - ID: 11297693348279105990
+          Type: 1
+          Value: 6
+  - Entity: 6644092402827342515
+    Active: false
+    Name: Enemy
+    RelationshipComponent:
+      Parent: "NULL"
+      Children:
+        {}
+    TransformComponent:
+      Transform: [-2.5, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+      LocalTransform: [-2.5, 0, 0]
+      LocalRotation: [0, 0, 0]
+      LocalScale: [1, 1, 1]
+    SpriteRendererComponent:
+      Active: true
+      Color: [1, 1, 1, 1]
+      Texture: 9046268343089011543
+      TilingFactor: 1
+      Size: [16, 16]
+      SpritePosition: [3, 0]
+    EnemyComponent:
+      Parameters:
+        - ID: 11643207166882079668
+          Type: 1
+          Value: 0
