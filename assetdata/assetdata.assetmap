@@ -11,12 +11,12 @@ Assets:
   - ID: 18064623489080585732
     Type: Scene
     Path: C:\dev\Omni Projects\TestProject4\assets\scenes\Test4.omscene
-  - ID: 9046268343089011543
-    Type: Texture2D
-    Path: C:\dev\Omni Projects\TestProject4\assets\Smiles.png
   - ID: 12091299273736898709
     Type: Shader
     Path: C:\dev\Omni Projects\TestProject4\assets\shaders\Omni_Sprite.glsl
+  - ID: 9046268343089011543
+    Type: Texture2D
+    Path: C:\dev\Omni Projects\TestProject4\assets\Smiles.png
   - ID: 9802913542220805447
     Type: Shader
     Path: C:\dev\Omni Projects\TestProject4\assets\shaders\RayMarch.glsl

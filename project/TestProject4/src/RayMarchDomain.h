@@ -30,11 +30,9 @@ public:
 
 	void OnImGuiRender() override;
 
-	bool Cull(CameraComponent* camera, glm::mat4 Transform, glm::vec3 Min, glm::vec3 Max);
+	bool Cull(Camera* camera, BoundingBox* bb);
 
 private:
 	Scene* m_Scene;
 	CustomRendererDomain* m_Renderer;
-
-	std::vector<Entity> m_Visible;
 };

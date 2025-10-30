@@ -811,6 +811,7 @@ ComponentGroup<
 	RelationshipComponent,
 	SpriteRendererComponent,
 	CameraComponent,
+    BoundingBox,
 	NativeScriptComponent%s
 >;
 

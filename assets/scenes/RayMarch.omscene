@@ -48,6 +48,9 @@ Entities:
       LocalTransform: [0, 1.5, 0]
       LocalRotation: [0, 0, 0]
       LocalScale: [1, 1, 1]
+    BoundingBox:
+      Active: true
+      Scale: [0.699999988, 0.699999988, 0.699999988]
     Sphere:
       Parameters:
         - ID: 4491700942346212859
@@ -79,6 +82,9 @@ Entities:
       LocalTransform: [2, 1, 0]
       LocalRotation: [0, 0, 0]
       LocalScale: [0.5, 0.5, 0.5]
+    BoundingBox:
+      Active: true
+      Scale: [0.5, 0.5, 0.5]
     Box:
       Parameters:
         - ID: 2434607990049637580
@@ -103,10 +109,10 @@ Entities:
     TransformComponent:
       Transform: [-2.5, 1.5, 0]
       Rotation: [0, 0, 0]
-      Scale: [1, 1, 1]
+      Scale: [0.25, 0.910000026, 0.25999999]
       LocalTransform: [-2.5, 1.5, 0]
       LocalRotation: [0, 0, 0]
-      LocalScale: [1, 1, 1]
+      LocalScale: [0.25, 0.910000026, 0.25999999]
     Cylinder:
       Parameters:
         - ID: 1739077623912565484
@@ -138,6 +144,9 @@ Entities:
       LocalTransform: [0, 12, -6]
       LocalRotation: [0, 0, 0]
       LocalScale: [12, 12, 1]
+    BoundingBox:
+      Active: true
+      Scale: [12, 12, 1]
     TexturedBox:
       Parameters:
         - ID: 1911375522390315374
@@ -172,6 +181,9 @@ Entities:
       LocalTransform: [0, 12, 12]
       LocalRotation: [0, 0, 0]
       LocalScale: [12, 12, 1]
+    BoundingBox:
+      Active: true
+      Scale: [12, 12, 1]
     TexturedBox:
       Parameters:
         - ID: 1911375522390315374
@@ -206,6 +218,9 @@ Entities:
       LocalTransform: [-12.5, 12, 3]
       LocalRotation: [0, 0, 0]
       LocalScale: [1, 12, 10]
+    BoundingBox:
+      Active: true
+      Scale: [1, 12, 10]
     TexturedBox:
       Parameters:
         - ID: 1911375522390315374
@@ -240,6 +255,9 @@ Entities:
       LocalTransform: [11, 20, 3]
       LocalRotation: [0, 0, 0]
       LocalScale: [1, 12, 10]
+    BoundingBox:
+      Active: true
+      Scale: [1, 12, 10]
     TexturedBox:
       Parameters:
         - ID: 1911375522390315374
@@ -274,6 +292,9 @@ Entities:
       LocalTransform: [11, 12, -17]
       LocalRotation: [0, 0, 0]
       LocalScale: [0.999994457, 12, 9.99991131]
+    BoundingBox:
+      Active: true
+      Scale: [1, 12, 10]
     TexturedBox:
       Parameters:
         - ID: 1911375522390315374
@@ -308,6 +329,9 @@ Entities:
       LocalTransform: [26, 1.5, 3]
       LocalRotation: [0, 0, 0]
       LocalScale: [2, 1.5, 2]
+    BoundingBox:
+      Active: true
+      Scale: [2, 1.5, 2]
     TexturedBox:
       Parameters:
         - ID: 1911375522390315374
@@ -342,6 +366,9 @@ Entities:
       LocalTransform: [26, 14, 3]
       LocalRotation: [0, 0, 0]
       LocalScale: [2, 6, 2]
+    BoundingBox:
+      Active: true
+      Scale: [2, 6, 2]
     TexturedBox:
       Parameters:
         - ID: 1911375522390315374
@@ -376,6 +403,9 @@ Entities:
       LocalTransform: [26, 4, 3]
       LocalRotation: [0, 0, 0]
       LocalScale: [1, 1, 1]
+    BoundingBox:
+      Active: true
+      Scale: [0.699999988, 0.699999988, 0.699999988]
     Sphere:
       Parameters:
         - ID: 4491700942346212859
@@ -407,6 +437,9 @@ Entities:
       LocalTransform: [26, 7, 3]
       LocalRotation: [0, 0, 0]
       LocalScale: [1, 1, 1]
+    BoundingBox:
+      Active: true
+      Scale: [0.699999988, 0.699999988, 0.699999988]
     Sphere:
       Parameters:
         - ID: 4491700942346212859
@@ -424,3 +457,74 @@ Entities:
         - ID: 16541060979160176014
           Type: 4
           Value: 0.400000006
+  - Entity: 8712140915040354610
+    Active: true
+    Name: Marker
+    RelationshipComponent:
+      Parent: "NULL"
+      Children:
+        {}
+    TransformComponent:
+      Transform: [6, 2, 7]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+      LocalTransform: [6, 2, 7]
+      LocalRotation: [0, 0, 0]
+      LocalScale: [1, 1, 1]
+    BoundingBox:
+      Active: true
+      Scale: [1, 1, 1]
+    TexturedBox:
+      Parameters:
+        - ID: 1911375522390315374
+          Type: 4
+          Value: 1
+        - ID: 4112456018670455898
+          Type: 4
+          Value: 1
+        - ID: 7431374160918991984
+          Type: 4
+          Value: 0
+        - ID: 10516733998445262552
+          Type: 4
+          Value: 1
+        - ID: 11267309283678801429
+          Type: 4
+          Value: 0
+        - ID: 12656556527923783982
+          Type: 4
+          Value: 1
+  - Entity: 6031314225478807477
+    Active: true
+    Name: Entity
+    RelationshipComponent:
+      Parent: "NULL"
+      Children:
+        {}
+    TransformComponent:
+      Transform: [-2.5, 1.5, 0]
+      Rotation: [0, 0, 0]
+      Scale: [0.25, 0.910000026, 0.25999999]
+      LocalTransform: [-2.5, 1.5, 0]
+      LocalRotation: [0, 0, 0]
+      LocalScale: [0.25, 0.910000026, 0.25999999]
+    TexturedBox:
+      Parameters:
+        - ID: 1911375522390315374
+          Type: 4
+          Value: 1
+        - ID: 4112456018670455898
+          Type: 4
+          Value: 1
+        - ID: 7431374160918991984
+          Type: 4
+          Value: 0
+        - ID: 10516733998445262552
+          Type: 4
+          Value: 1
+        - ID: 11267309283678801429
+          Type: 4
+          Value: 0
+        - ID: 12656556527923783982
+          Type: 4
+          Value: 1

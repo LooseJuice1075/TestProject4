@@ -190,6 +190,11 @@ long long timeSinceLastAnimScene = 0;
 
 void CustomRendererDomain::BeginScene(Camera& camera)
 {
+	if (!MainCamera)
+	{
+		MainCamera = &camera;
+	}
+
 	s_Data.CameraBuffer.ViewProjection = camera.GetViewProjectionMatrix();
 	s_Data.CameraUniformBuffer->SetData(&s_Data.CameraBuffer, sizeof(RendererData::CameraData));
 

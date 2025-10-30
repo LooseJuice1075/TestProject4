@@ -137,6 +137,8 @@ public:
 	static Scope<SceneData> s_SceneData;
 	inline static glm::vec4 s_ClearColor;
 
+	Camera* MainCamera = nullptr;
+
 	long long StartTime;
 
 	Ref<Shader> TestShader;

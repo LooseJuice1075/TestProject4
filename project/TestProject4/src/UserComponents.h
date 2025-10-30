@@ -53,9 +53,6 @@ struct TexturedBox
 	float TextureIndex = 0.0f;
 	float TextureScale = 1.0f;
 	OM_END_PARAM_GROUP;
-
-	glm::vec3 AABB_Min = glm::vec3(-1.0f);
-	glm::vec3 AABB_Max = glm::vec3(1.0f);
 };
 
 OM_COMPONENT;

@@ -26,24 +26,27 @@ void RayMarchDomain::OnUpdateStart(Timestep ts)
 {
 }
 
-bool RayMarchDomain::Cull(CameraComponent* camera, glm::mat4 Transform, glm::vec3 Min, glm::vec3 Max)
+bool RayMarchDomain::Cull(Camera* camera, BoundingBox* bb)
 {
-	glm::mat4 vp = camera->Camera.GetViewProjectionMatrix();
-	glm::mat4 mvp = vp * Transform;
-
-	/*glm::vec4 corners[8] =
+	//OM_TRACE("----------------------------");
+	for (int i = 0; i < 8; i++)
 	{
-		{min.x, min.y, }
-	}*/
+		//OM_TRACE("{0}, {1}, {2}", bb->Points[i].x, bb->Points[i].y, bb->Points[i].z);
+		if (camera->IsPointVisible(bb->Points[i]))
+		{
+			return true;
+		}
+	}
+	//OM_TRACE("----------------------------");
 	return false;
+	//return true;
 }
 
 void RayMarchDomain::OnUpdate(Timestep ts)
 {
 	//return;
 
-	//m_Visible.clear();
-	CameraComponent* mainCamera = m_Scene->GetMainCamera();
+	//CameraComponent* mainCamera = m_Scene->GetMainCamera();
 
 	auto sphereView = m_Scene->m_Registry.view<TransformComponent, Sphere>();
 	for (auto entity : sphereView)
@@ -51,7 +54,17 @@ void RayMarchDomain::OnUpdate(Timestep ts)
 		auto [transform, sphere] = sphereView.get<TransformComponent, Sphere>(entity);
 		Entity e = { entity, m_Scene };
 
-		if (e.IsActive())
+		bool visible = true;
+		if (e.HasComponent<BoundingBox>() && m_Renderer->MainCamera)
+		{
+			BoundingBox* bb = &e.GetComponent<BoundingBox>();
+			if (bb->Active)
+			{
+				visible = Cull(m_Renderer->MainCamera, bb);
+			}
+		}
+
+		if (e.IsActive() && visible)
 			m_Renderer->DrawSphere(transform.Translation, glm::vec4(sphere.Red, sphere.Green, sphere.Blue, 1.0f), sphere.Blending, (int)(uint32_t)e, 0.5f);
 	}
 
@@ -61,7 +74,17 @@ void RayMarchDomain::OnUpdate(Timestep ts)
 		auto [transform, cube] = boxView.get<TransformComponent, Box>(entity);
 		Entity e = { entity, m_Scene };
 
-		if (e.IsActive())
+		bool visible = true;
+		if (e.HasComponent<BoundingBox>() && m_Renderer->MainCamera)
+		{
+			BoundingBox* bb = &e.GetComponent<BoundingBox>();
+			if (bb->Active)
+			{
+				visible = Cull(m_Renderer->MainCamera, bb);
+			}
+		}
+
+		if (e.IsActive() && visible)
 			m_Renderer->DrawBox(transform.Translation, transform.Rotation, transform.Scale, glm::vec4(cube.Red, cube.Green, cube.Blue, 1.0f), cube.Blending, (int)(uint32_t)e);
 	}
 
@@ -71,13 +94,17 @@ void RayMarchDomain::OnUpdate(Timestep ts)
 		auto [transform, cube] = texturedBoxView.get<TransformComponent, TexturedBox>(entity);
 		Entity e = { entity, m_Scene };
 
-		/bool cull = false;
-		//if (e.IsActive() && mainCamera)
-		//{
-		//	cull = Cull(mainCamera, transform.ToMat4(), cube.AABB_Min, cube.AABB_Max);
-		//}
+		bool visible = true;
+		if (e.HasComponent<BoundingBox>() && m_Renderer->MainCamera)
+		{
+			BoundingBox* bb = &e.GetComponent<BoundingBox>();
+			if (bb->Active)
+			{
+				visible = Cull(m_Renderer->MainCamera, bb);
+			}
+		}
 
-		if (e.IsActive() && !cull)
+		if (e.IsActive() && visible)
 			m_Renderer->DrawTexturedBox(transform.Translation, transform.Rotation, transform.Scale,
 				glm::vec4(cube.Red, cube.Green, cube.Blue, 1.0f), cube.Blending, (int)(uint32_t)e, cube.TextureIndex, cube.TextureScale);
 	}
@@ -88,7 +115,17 @@ void RayMarchDomain::OnUpdate(Timestep ts)
 		auto [transform, cylinder] = cylinderView.get<TransformComponent, Cylinder>(entity);
 		Entity e = { entity, m_Scene };
 
-		if (e.IsActive())
+		bool visible = true;
+		if (e.HasComponent<BoundingBox>() && m_Renderer->MainCamera)
+		{
+			BoundingBox* bb = &e.GetComponent<BoundingBox>();
+			if (bb->Active)
+			{
+				visible = Cull(m_Renderer->MainCamera, bb);
+			}
+		}
+
+		if (e.IsActive() && visible)
 			m_Renderer->DrawCylinder(transform.Translation, transform.Rotation, transform.Scale,
 				glm::vec4(cylinder.Red, cylinder.Green, cylinder.Blue, 1.0f), cylinder.Blending, (int)(uint32_t)e, cylinder.Height);
 	}
@@ -108,4 +145,24 @@ void RayMarchDomain::OnFixedUpdate()
 
 void RayMarchDomain::OnImGuiRender()
 {
+	ImGui::Begin("RayMarchDomain");
+
+	if (ImGui::Button("BB Visual"))
+	{
+		Entity marker = m_Scene->GetEntity("Marker");
+		if (marker.HasComponent<BoundingBox>())
+		{
+			auto& bb = marker.GetComponent<BoundingBox>();
+			for (int i = 0; i < 8; i++)
+			{
+				Entity point = m_Scene->CreateEntity("Point " + std::to_string(i));
+				auto& tc = point.GetComponent<TransformComponent>();
+				tc.Translation = bb.Points[i];
+				tc.Scale = { 0.1f, 0.1f, 0.1f };
+				auto& box = point.AddComponent<TexturedBox>();
+			}
+		}
+	}
+
+	ImGui::End();
 }
